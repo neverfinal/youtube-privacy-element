@@ -1,6 +1,6 @@
 {
   "name": "@neverfinal/youtube-privacy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Embed your youtube videos in accordance to the GDPR.",
   "main": "dist/youtube-privacy.js",
   "module": "dist/youtube-privacy.es.js",

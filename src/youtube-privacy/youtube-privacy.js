@@ -68,8 +68,8 @@ export default class YoutubePrivacy extends HTMLElement {
     templateVideo() {
         return `
             <iframe 
-                ${this._width ? `width="${this._width}` : ``}
-                ${this._height ? `height="${this._height}` : ''}
+                ${this._width ? `width="${this._width}"` : ``}
+                ${this._height ? `height="${this._height}"` : ''}
                 src="${this.getAttribute('src')}?autoplay=1" 
                 title="${this.getAttribute('title') ?? ''}"
                 frameborder="${this.getAttribute('frameborder') ?? 0}" 
