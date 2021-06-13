@@ -1,0 +1,56 @@
+:host {
+    --youtube-privacy-width: 100%;
+    --youtube-privacy-height: auto;
+
+    --youtube-privacy-background-color: white;
+    --youtube-privacy-inner-padding: 16px;
+}
+
+:host {
+    display: block;
+    position: relative;
+
+    width: var(--youtube-privacy-width);
+    height: var(--youtube-privacy-height);
+
+    background-color: var(--youtube-privacy-background-color);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: var(--youtube-privacy-width);
+    height: var(--youtube-privacy-height);
+
+    display: flex;
+    flex-direction: column;;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    padding: var(--youtube-privacy-inner-padding);
+}
+
+.poster {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.button-container {
+    position: relative;
+}
