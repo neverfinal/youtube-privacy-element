@@ -39,16 +39,20 @@ export default class YoutubePrivacy extends HTMLElement {
         }
 
         if (this.hasAttribute('width')) {
+            this._width = this.getAttribute('width');
+
             this.style.setProperty(
                 '--youtube-privacy-width',
-                this.getAttribute('width') + 'px'
+                this._width + 'px'
             );
         }
 
         if (this.hasAttribute('height')) {
+            this._height = this.getAttribute('height');
+
             this.style.setProperty(
                 '--youtube-privacy-height',
-                this.getAttribute('height') + 'px'
+                this._height + 'px'
             );
         }
 
@@ -63,7 +67,10 @@ export default class YoutubePrivacy extends HTMLElement {
 
     templateVideo() {
         return `
-            <iframe width="560" height="315" src="${this.getAttribute('src')}?autoplay=1" 
+            <iframe 
+                ${this._width ? `width="${this._width}` : ``}
+                ${this._height ? `height="${this._height}` : ''}
+                src="${this.getAttribute('src')}?autoplay=1" 
                 title="${this.getAttribute('title') ?? ''}"
                 frameborder="${this.getAttribute('frameborder') ?? 0}" 
                 allow="
