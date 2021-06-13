@@ -5,7 +5,7 @@ a 2-click solution for loading YouTube videos.
 
 ## Installation
 
-Install using `npm install --save youtube-privacy`
+Install using `npm install --save @neverfinal/youtube-privacy`
 
 ## Usage
 
