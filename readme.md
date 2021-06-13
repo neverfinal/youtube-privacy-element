@@ -1,18 +1,27 @@
 # YouTube Privacy Element
 
-Replace an existing iframe from YouTube with the "youtube-privacy" element to add 
-a 2-click solution for loading YouTube videos.
+An extremely lightweight soluting to replace an existing youtube embed with a 
+gdpr-conform 2-click solution using the `WebComponents` standard.
 
 ## Installation
 
-Install using `npm install --save @neverfinal/youtube-privacy`
+### Using `npm`
+
+`npm install --save @neverfinal/youtube-privacy`. 
+
+Then include the `dist/youtube-privacy.js` script in your bundle or add it to your website.
+
+### Using `unpkg`
+
+Include the following script tag in the footer of your website:
+
+```js
+    <script src="https://unpkg.com/@neverfinal/youtube-privacy"></script>
+```
 
 ## Usage
 
-1. Include the `youtube-privacy.js` script in the footer of your website or bundle
-it with your favorite bundler.
-
-2. Copy the embed code from any YouTube video
+1. Copy the embed code from any YouTube video
 ```html
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xxxxxx"
             title="YouTube video player"
@@ -21,7 +30,7 @@ it with your favorite bundler.
     </iframe>
 ```
 
-3. Replace the `iframe` tag with `youtube-privacy`
+2. Replace the `iframe` tag with `youtube-privacy`
 
 ```html
     <youtube-privacy width="560" height="315" src="https://www.youtube-nocookie.com/embed/xxxxxx"
