@@ -8,6 +8,10 @@ export default class YoutubePrivacy extends HTMLElement {
 		return this.shadowRoot;
 	}
 
+	static get observedAttributes() {
+		return ["width", "height"];
+	}
+
 	constructor() {
 		super();
 
@@ -80,11 +84,9 @@ export default class YoutubePrivacy extends HTMLElement {
 	}
 
 	attributeChangedCallback(name) {
-		if (["width", "height"].includes(name)) {
-			this.determineDimensions();
+		this.determineDimensions();
 
-			this.render();
-		}
+		this.render();
 	}
 
 	templateVideo() {
