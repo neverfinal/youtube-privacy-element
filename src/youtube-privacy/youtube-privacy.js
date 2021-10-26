@@ -21,11 +21,21 @@ export default class YoutubePrivacy extends HTMLElement {
             : `${this.templatePrivacy()} ${this.templateStyles()}`;
     }
 
+    getVideoSource() {
+        const src = this.getAttribute('src');
+        const url = new URL(src);
+
+        url.searchParams.set('autoplay', '1');
+
+        return url.toString();
+    }
+
     getPosterFromSource() {
         const source = this.getAttribute('src');
 
         if (source) {
-            return `https://img.youtube.com/vi/${source.split('/').pop()}/0.jpg`;
+            const url = new URL(source);
+            return `https://img.youtube.com/vi/${url.pathname.split('/').pop()}/0.jpg`;
         }
 
         return false;
@@ -68,9 +78,10 @@ export default class YoutubePrivacy extends HTMLElement {
     templateVideo() {
         return `
             <iframe 
+                part="video"
                 ${this._width ? `width="${this._width}"` : ``}
                 ${this._height ? `height="${this._height}"` : ''}
-                src="${this.getAttribute('src')}?autoplay=1" 
+                src="${this.getVideoSource()} 
                 title="${this.getAttribute('title') ?? ''}"
                 frameborder="${this.getAttribute('frameborder') ?? 0}" 
                 allow="
