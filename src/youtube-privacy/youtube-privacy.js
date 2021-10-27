@@ -128,7 +128,7 @@ export default class YoutubePrivacy extends HTMLElement {
 						? `
                     <img class="poster" part="poster" src="${
 						this.poster
-					}" alt="${this.getAttribute("title") ?? ""}" />
+					}" alt="${this.getAttribute('title') ?? ''}" />
                 `
 						: ``
 				}
