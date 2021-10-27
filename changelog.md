@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0] - 2021-10-27
+### Changed
+- The width and height attributes are now reactive
+- Removed babel from the build step as all targeted browsers support the required features
+- Added `postcss` dependency
+
+### Fixed
+- Added the missing `"` to template
+
 ## [1.1.0] - 2021-10-26
 ### Added
 - `part`-attribute to the video iframe
