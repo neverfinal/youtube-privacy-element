@@ -81,7 +81,7 @@ export default class YoutubePrivacy extends HTMLElement {
                 part="video"
                 ${this._width ? `width="${this._width}"` : ``}
                 ${this._height ? `height="${this._height}"` : ''}
-                src="${this.getVideoSource()} 
+                src="${this.getVideoSource()}"
                 title="${this.getAttribute('title') ?? ''}"
                 frameborder="${this.getAttribute('frameborder') ?? 0}" 
                 allow="
